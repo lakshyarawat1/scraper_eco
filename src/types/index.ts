@@ -17,7 +17,7 @@ export type Product = {
     priceHistory: PriceHistoryItem[] | [];
     highestPrice: number,
     lowestPrice: number,
-    averagePrice: number,
+    description : string,
     discountRate: number,
     category: string,
     reviewsCount: number,
