@@ -6,12 +6,15 @@ const navIcons = [
   {
     src: "/assets/icons/search.svg",
     alt: "search",
+    route: "/",
   },
   {
     src: "/assets/icons/black-heart.svg",
+    route: "/notifications",
     alt: "heart",
   },
   {
+    route: "/login",
     src: "/assets/icons/user.svg",
     alt: "user",
   },
@@ -34,14 +37,18 @@ const Navbar = () => {
         </Link>
         <div className="flex gap-5 items-center ">
           {navIcons.map((icon) => (
-            <Image
+            <Link
               key={icon.alt}
-              src={icon.src}
-              alt={icon.alt}
-              width={28}
-              height={28}
-              className="object-contain"
-            />
+              href={icon.route}
+            >
+              <Image
+                src={icon.src}
+                alt={icon.alt}
+                width={28}
+                height={28}
+                className="object-contain"
+              />
+            </Link>
           ))}
         </div>
       </nav>
